@@ -27,8 +27,8 @@ public class Demo2CreateStudentImagesList {
 
             StudentV2 s1 = new StudentV2.StudentV2Builder()
                     .setFirstNme("Alex")
-                    .setLastName("Burghelea")
-                    .setEmail("alex_burghelea@email.com")
+                    .setLastName("Barbulescu")
+                    .setEmail("alex_barbulescu@email.com")
                     .build();
 
             List<String> theImages = s1.getImages();

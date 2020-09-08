@@ -7,7 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class Demo9CreateStudentAndInstructorFromUser {
+public class Demo9CreateStudentAndInstructorFromUserSingleTableInheritance {
 
     public static void main(String[] args) {
 
@@ -23,7 +23,7 @@ public class Demo9CreateStudentAndInstructorFromUser {
         StudentV9 tempStudent = new StudentV9
                 .StudentV9Builder()
                 .setEmail("alex_test@email.com")
-                .setLastName("Florescu")
+                .setLastName("Ionescu")
                 .setFirstName("Alex")
                 .setCourse("Math")
                 .build();
