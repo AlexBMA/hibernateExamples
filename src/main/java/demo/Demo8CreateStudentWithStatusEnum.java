@@ -27,7 +27,7 @@ public class Demo8CreateStudentWithStatusEnum {
 
         StudentV8 tempStudent2 = new StudentV8.StudentBuilder()
                 .setEmail("mario_new_email@email.com")
-                .setStatus(Status.ACTIVE)
+                .setStatus(Status.INACTIVE)
                 .setLastName("Mario")
                 .setFirstName("Nintendo")
                 .build();
