@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "user")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "USER_TYPE", discriminatorType = DiscriminatorType.STRING)
-public class User {
+public abstract class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -18,7 +18,7 @@ public class User {
     @Column(name = "email")
     private String email;
 
-    public static class UserBuilder {
+    public static abstract class UserBuilder {
 
         private String firstName;
         private String lastName;
@@ -49,10 +49,6 @@ public class User {
 
         public String getEmail() {
             return email;
-        }
-
-        public User build() {
-            return new User(firstName, lastName, email);
         }
 
     }
