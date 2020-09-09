@@ -1,4 +1,4 @@
-package demo;
+package demo.inheritance;
 
 import entity.*;
 import org.hibernate.Session;

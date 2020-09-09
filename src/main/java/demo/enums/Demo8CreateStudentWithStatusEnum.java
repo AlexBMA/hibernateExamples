@@ -1,4 +1,4 @@
-package demo;
+package demo.enums;
 
 import entity.StudentV8;
 import enums.Status;

@@ -1,4 +1,4 @@
-package demo;
+package demo.collections.mapping;
 
 import entity.*;
 import org.hibernate.Session;

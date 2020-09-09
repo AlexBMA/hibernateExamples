@@ -1,4 +1,4 @@
-package demo;
+package demo.embed;
 
 import entity.AddressV2;
 import entity.StudentV7;

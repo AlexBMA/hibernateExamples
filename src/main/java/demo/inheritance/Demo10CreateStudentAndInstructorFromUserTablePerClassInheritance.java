@@ -1,4 +1,4 @@
-package demo;
+package demo.inheritance;
 
 import entity.InstructorV2;
 import entity.StudentV10;
