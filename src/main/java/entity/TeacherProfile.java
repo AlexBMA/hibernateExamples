@@ -47,6 +47,10 @@ public class TeacherProfile {
         this.hobby = hobby;
     }
 
+    public long getId() {
+        return id;
+    }
+
     public String getYoutubeChanel() {
         return youtubeChanel;
     }
