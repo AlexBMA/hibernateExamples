@@ -9,7 +9,7 @@ import org.hibernate.cfg.Configuration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Demo18OneToManyBidirectionalMapping {
+public class Demo19OneToManyBidirectionalMappingDelete {
 
     public static void main(String[] args) {
 
@@ -19,8 +19,17 @@ public class Demo18OneToManyBidirectionalMapping {
                 .addAnnotatedClass(Course.class)
                 .buildSessionFactory();
 
+        addTeacherAndCourses(sessionFactory);
 
-        Session currentSession = addTeacherAndCourses(sessionFactory);
+        Session currentSession = sessionFactory.getCurrentSession();
+        currentSession.beginTransaction();
+
+        TeacherV4 teacherV4 = currentSession.get(TeacherV4.class, 1L);
+
+        Course course = teacherV4.getCourses().get(1);
+        currentSession.delete(course);
+
+        currentSession.getTransaction().commit();
 
         currentSession.close();
         sessionFactory.close();
@@ -66,5 +75,4 @@ public class Demo18OneToManyBidirectionalMapping {
         currentSession.getTransaction().commit();
         return currentSession;
     }
-
 }
