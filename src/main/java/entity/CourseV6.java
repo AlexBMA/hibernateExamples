@@ -14,7 +14,8 @@ public class CourseV6 {
     @Column(name = "course_title")
     private String courseTitle;
 
-    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    @ManyToMany(fetch = FetchType.LAZY,
+            cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     @JoinTable(
             name = "course_student",
             joinColumns = @JoinColumn(name = "course_id"),
